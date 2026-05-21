@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>社労士事務所の「ストック型収益」構築ガイド｜脱・労働集約！クラウド連携で新収益モデルへ</title>
+<meta name="description" content="労働集約型から脱却し、クラウド連携による「ストック型収益」と「高付加価値化」を実現する社労士事務所の新・収益モデル構築ガイド。ジョブカン×WFJ特別プランのご案内。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a1628;
+  --navy-light: #12243d;
+  --navy-mid: #1a3355;
+  --teal: #00d4aa;
+  --teal-glow: #00ffcc;
+  --teal-dark: #00a88a;
+  --sky: #38b6ff;
+  --orange: #f57c00;
+  --cream: #fdf8f0;
+  --white: #ffffff;
+  --gray-100: #f4f6f8;
+  --gray-300: #c0c8d4;
+  --gray-600: #6b7a8d;
+  --red-soft: #ff6b6b;
+  --font-heading: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+  --font-body: 'Noto Sans JP', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-body);
+  color: var(--white);
+  background: var(--navy);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+/* ============ UTILITY ============ */
+.container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.section-pad { padding: 80px 0; }
+@media (max-width: 768px) { .section-pad { padding: 56px 0; } }
+
+.accent { color: var(--teal); }
+.accent-orange { color: var(--orange); }
+.accent-sky { color: var(--sky); }
+.accent-red { color: var(--red-soft); }
+
+.tag {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--teal), var(--sky));
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+.section-sub {
+  font-size: 1rem;
+  color: var(--gray-300);
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+/* ============ HERO ============ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 24px 60px;
+  background: radial-gradient(ellipse at 30% 20%, rgba(0,212,170,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 80%, rgba(56,182,255,0.06) 0%, transparent 50%),
+              var(--navy);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300d4aa' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hero-content { position: relative; z-index: 2; max-width: 780px; }
+
+.hero-eyecatch {
+  font-family: var(--font-heading);
+  font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+  font-weight: 700;
+  color: var(--teal);
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.hero-eyecatch::before,
+.hero-eyecatch::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--teal);
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, var(--white), var(--teal-glow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 700;
+  color: var(--sky);
+  margin-bottom: 32px;
+}
+
+.hero-desc {
+  font-size: 0.95rem;
+  color: var(--gray-300);
+  max-width: 580px;
+  margin: 0 auto 40px;
+  line-height: 1.9;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto 40px;
+  box-shadow: 0 20px 60px rgba(0,212,170,0.12), 0 0 0 1px rgba(0,212,170,0.15);
+}
+.hero-image img { width: 100%; display: block; }
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+  color: var(--navy);
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding: 16px 40px;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,212,170,0.3);
+}
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,212,170,0.4);
+}
+
+/* ============ PAIN SECTION ============ */
+.pain-section {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%);
+}
+
+.pain-spiral {
+  display: grid;
+  gap: 16px;
+  counter-reset: paincount;
+}
+.pain-card {
+  counter-increment: paincount;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,107,107,0.15);
+  border-left: 4px solid var(--red-soft);
+  border-radius: 10px;
+  padding: 24px 24px 24px 56px;
+  position: relative;
+  transition: transform 0.2s, border-color 0.3s;
+}
+.pain-card:hover {
+  transform: translateX(4px);
+  border-color: rgba(255,107,107,0.4);
+}
+.pain-card::before {
+  content: counter(paincount);
+  position: absolute;
+  left: 16px;
+  top: 24px;
+  width: 28px;
+  height: 28px;
+  background: var(--red-soft);
+  color: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+.pain-card h4 { font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; }
+.pain-card p { font-size: 0.88rem; color: var(--gray-300); }
+
+.pain-callout {
+  margin-top: 32px;
+  background: rgba(255,107,107,0.08);
+  border: 1px solid rgba(255,107,107,0.2);
+  border-radius: 12px;
+  padding: 24px 28px;
+  font-size: 0.95rem;
+  color: var(--gray-100);
+  line-height: 1.8;
+}
+
+/* ============ TAILWIND (2025) ============ */
+.tailwind-section {
+  background: linear-gradient(180deg, var(--navy-light) 0%, var(--navy) 100%);
+}
+.tw-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 640px) { .tw-grid { grid-template-columns: 1fr; } }
+.tw-stat {
+  background: linear-gradient(135deg, rgba(0,212,170,0.08), rgba(56,182,255,0.05));
+  border: 1px solid rgba(0,212,170,0.15);
+  border-radius: 14px;
+  padding: 28px;
+  text-align: center;
+}
+.tw-stat .num {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: var(--teal);
+  line-height: 1.1;
+}
+.tw-stat .label {
+  font-size: 0.88rem;
+  color: var(--gray-300);
+  margin-top: 6px;
+}
+
+.insight-box {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0,212,170,0.15);
+}
+@media (max-width: 640px) { .insight-box { grid-template-columns: 1fr; } }
+.insight-outer {
+  background: rgba(255,255,255,0.03);
+  padding: 28px;
+}
+.insight-inner {
+  background: rgba(0,212,170,0.06);
+  padding: 28px;
+}
+.insight-box h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--teal);
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+.insight-box ul {
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--gray-100);
+}
+.insight-box li { margin-bottom: 8px; padding-left: 18px; position: relative; }
+.insight-box li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+}
+
+/* ============ APPROACH ============ */
+.approach-section {
+  background: var(--navy);
+}
+.approach-vs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+@media (max-width: 640px) { .approach-vs { grid-template-columns: 1fr; } }
+.approach-card {
+  border-radius: 14px;
+  padding: 28px;
+}
+.approach-card.bad {
+  background: rgba(255,107,107,0.06);
+  border: 1px solid rgba(255,107,107,0.2);
+}
+.approach-card.good {
+  background: rgba(0,212,170,0.06);
+  border: 1px solid rgba(0,212,170,0.25);
+}
+.approach-card .card-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+.approach-card.bad .card-label { color: var(--red-soft); }
+.approach-card.good .card-label { color: var(--teal); }
+.approach-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+.approach-card p { font-size: 0.9rem; color: var(--gray-300); }
+.approach-card .example {
+  margin-top: 14px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 0.88rem;
+  color: var(--gray-100);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* ============ JOBCAN / PARTNER ============ */
+.partner-section {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%);
+}
+.partner-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+}
+@media (max-width: 640px) { .partner-features { grid-template-columns: 1fr; } }
+.pf-card {
+  background: rgba(0,212,170,0.04);
+  border: 1px solid rgba(0,212,170,0.12);
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+}
+.pf-icon {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+.pf-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+.pf-card p { font-size: 0.85rem; color: var(--gray-300); }
+
+/* ============ STOCK MODEL ============ */
+.stock-section {
+  background: var(--navy-light);
+}
+.model-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0,212,170,0.15);
+  margin-bottom: 32px;
+}
+@media (max-width: 640px) { .model-compare { grid-template-columns: 1fr; } }
+.model-old {
+  background: rgba(255,255,255,0.03);
+  padding: 28px;
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+.model-new {
+  background: rgba(0,212,170,0.06);
+  padding: 28px;
+}
+.model-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.model-old .model-label { color: var(--gray-600); }
+.model-new .model-label { color: var(--teal); }
+.model-compare h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+.model-compare p { font-size: 0.88rem; color: var(--gray-300); line-height: 1.7; }
+
+.calc-box {
+  background: rgba(0,212,170,0.06);
+  border: 1px solid rgba(0,212,170,0.2);
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+.calc-box h4 { font-size: 1rem; font-weight: 700; color: var(--teal); margin-bottom: 12px; }
+.calc-line { font-size: 0.92rem; color: var(--gray-100); margin-bottom: 4px; }
+.calc-highlight {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--teal-glow);
+  margin-top: 10px;
+}
+
+/* ============ CASE STUDIES ============ */
+.cases-section {
+  background: linear-gradient(180deg, var(--navy-light) 0%, var(--navy) 100%);
+}
+.case-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(0,212,170,0.12);
+  border-radius: 14px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+.case-badge {
+  display: inline-block;
+  background: var(--teal);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.72rem;
+  padding: 3px 12px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+.case-card h4 { font-size: 1.15rem; font-weight: 700; margin-bottom: 16px; }
+.case-flow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+@media (max-width: 640px) { .case-flow { grid-template-columns: 1fr; } }
+.case-step {
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  padding: 18px;
+}
+.case-step .step-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--teal);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.case-step p { font-size: 0.85rem; color: var(--gray-100); line-height: 1.7; }
+
+/* ============ DOMINO ============ */
+.domino-section {
+  background: var(--navy);
+}
+.domino-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+@media (max-width: 768px) { .domino-steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .domino-steps { grid-template-columns: 1fr; } }
+.domino-card {
+  background: linear-gradient(180deg, rgba(0,212,170,0.08) 0%, rgba(0,212,170,0.02) 100%);
+  border: 1px solid rgba(0,212,170,0.15);
+  border-radius: 12px;
+  padding: 22px 18px;
+  text-align: center;
+  position: relative;
+}
+.domino-card .dom-num {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--teal);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.domino-card h4 { font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; }
+.domino-card p { font-size: 0.78rem; color: var(--gray-300); }
+
+/* ============ VIRTUOUS CYCLE ============ */
+.cycle-section {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%);
+}
+.cycle-list {
+  counter-reset: cyclecount;
+}
+.cycle-item {
+  counter-increment: cyclecount;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 20px;
+  background: rgba(0,212,170,0.04);
+  border: 1px solid rgba(0,212,170,0.1);
+  border-radius: 12px;
+  padding: 22px 24px;
+}
+.cycle-num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--teal), var(--sky));
+  color: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+.cycle-item h4 { font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+.cycle-item p { font-size: 0.85rem; color: var(--gray-300); }
+
+/* ============ MEDIA SECTION ============ */
+.media-section {
+  background: var(--navy-light);
+}
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 640px) { .media-grid { grid-template-columns: 1fr; } }
+.media-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(0,212,170,0.12);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.media-card video, .media-card audio { width: 100%; display: block; }
+.media-card .media-body { padding: 20px; }
+.media-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
+.media-card p { font-size: 0.82rem; color: var(--gray-300); }
+
+/* ============ WFJ OFFER ============ */
+.offer-section {
+  background: linear-gradient(180deg, var(--navy-light) 0%, var(--navy) 100%);
+}
+.offer-box {
+  background: linear-gradient(135deg, rgba(0,212,170,0.1), rgba(56,182,255,0.06));
+  border: 2px solid rgba(0,212,170,0.3);
+  border-radius: 20px;
+  padding: 48px 36px;
+  text-align: center;
+}
+.offer-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.offer-sub {
+  font-size: 1rem;
+  color: var(--teal);
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.offer-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 36px;
+}
+@media (max-width: 640px) { .offer-points { grid-template-columns: 1fr; } }
+.op-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 14px;
+  padding: 24px 18px;
+}
+.op-card .op-icon { font-size: 2rem; margin-bottom: 8px; }
+.op-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+.op-card p { font-size: 0.82rem; color: var(--gray-300); }
+
+/* ============ CLOSING ============ */
+.closing-section {
+  background: radial-gradient(ellipse at 50% 80%, rgba(0,212,170,0.1) 0%, transparent 60%),
+              var(--navy);
+  text-align: center;
+  padding: 80px 24px;
+}
+.closing-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  font-weight: 900;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.closing-desc {
+  font-size: 0.95rem;
+  color: var(--gray-300);
+  max-width: 560px;
+  margin: 0 auto 36px;
+  line-height: 1.9;
+}
+
+/* ============ FOOTER ============ */
+footer {
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 28px 24px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--gray-600);
+}
+
+/* ============ ANIMATION ============ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============ 87% BIG NUMBER ============ */
+.big-number-section {
+  text-align: center;
+  padding: 40px 0;
+}
+.big-number {
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--teal), var(--sky));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+.big-number-label {
+  font-size: 1rem;
+  color: var(--gray-300);
+  margin-top: 8px;
+}
+
+/* Glow line decoration */
+.glow-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--teal), var(--sky));
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+.glow-line.center { margin-left: auto; margin-right: auto; }
+
+/* Quote bubble */
+.quote-bubble {
+  background: rgba(0,212,170,0.06);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 12px 12px 0;
+  padding: 20px 24px;
+  margin-top: 24px;
+  font-size: 0.92rem;
+  color: var(--gray-100);
+  line-height: 1.8;
+  font-style: italic;
+}
+
+/* ============ SLIDE GALLERY ============ */
+.slides-section { background: var(--navy); }
+.slide-gallery { position: relative; max-width: 800px; margin: 0 auto 32px; }
+.slide-viewer {
+  position: relative; border-radius: 12px; overflow: hidden;
+  border: 1px solid rgba(0,212,170,0.2);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  aspect-ratio: 16/9; background: var(--navy-light);
+}
+.slide-viewer img { width: 100%; height: 100%; object-fit: contain; display: block; transition: opacity 0.3s ease; }
+.slide-nav { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 20px; }
+.slide-nav button {
+  background: rgba(0,212,170,0.15); border: 1px solid rgba(0,212,170,0.3);
+  color: var(--white); width: 44px; height: 44px; border-radius: 50%;
+  font-size: 1.2rem; cursor: pointer; transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.slide-nav button:hover { background: rgba(0,212,170,0.3); transform: scale(1.05); }
+.slide-counter { font-family: var(--font-heading); font-weight: 700; font-size: 0.95rem; color: var(--gray-300); min-width: 80px; text-align: center; }
+.slide-counter .current { color: var(--teal); font-size: 1.2rem; }
+.slide-thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; margin-top: 20px; }
+.slide-thumbs img {
+  width: 100%; border-radius: 6px; cursor: pointer;
+  border: 2px solid transparent; transition: border-color 0.2s, opacity 0.2s; opacity: 0.5;
+}
+.slide-thumbs img.active { border-color: var(--teal); opacity: 1; }
+.slide-thumbs img:hover { opacity: 0.85; }
+.download-area { text-align: center; margin-top: 28px; }
+.dl-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, var(--sky), #2d8fd8);
+  color: var(--white); font-family: var(--font-heading); font-weight: 700;
+  font-size: 1rem; padding: 14px 32px; border-radius: 60px;
+  text-decoration: none; transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(56,182,255,0.3);
+}
+.dl-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(56,182,255,0.4); }
+
+</style>
+</head>
+<body>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyecatch">新時代への設計図</div>
+    <h1>脱・労働集約！<br>社労士事務所の<br>「新・収益モデル」ガイド</h1>
+    <p class="hero-sub">クラウド連携による「ストック型収益」と「高付加価値化」への転換プロセス</p>
+    <p class="hero-desc">
+      「忙しいのに利益が残らない…」<br>
+      そんな悩みを、クラウドとの『パートナーシップ』で解決する設計図をお渡しします。
+    </p>
+    <div class="hero-image">
+      <img src="hero.jpg" alt="社労士ストック型収益構築ガイド" loading="eager">
+    </div>
+    <a href="#offer" class="cta-btn">▼ 特別プランを見る</a>
+  </div>
+</section>
+
+<!-- ==================== PAIN ==================== -->
+<section class="pain-section section-pad" id="pain">
+  <div class="container">
+    <div class="fade-up">
+      <span class="tag">STEP 1 — 現状認識</span>
+      <h2 class="section-title">「手続き・給与計算」に依存する<br><span class="accent-red">旧来モデルの限界</span></h2>
+      <p class="section-sub">単価競争による低収益と過重労働は、離職や品質低下を招く「悪循環」の源です。</p>
+    </div>
+    <div class="pain-spiral fade-up">
+      <div class="pain-card">
+        <h4>差別化の困難</h4>
+        <p>手続き・給与のみで他事務所との違いが出せない</p>
+      </div>
+      <div class="pain-card">
+        <h4>価格競争</h4>
+        <p>顧客の選定基準が「料金」になり薄利に陥る</p>
+      </div>
+      <div class="pain-card">
+        <h4>過重労働</h4>
+        <p>利益率が低く、数をこなす必要があり疲弊する</p>
+      </div>
+      <div class="pain-card">
+        <h4>職員の離職</h4>
+        <p>給与に還元できず、スタッフが定着しない</p>
+      </div>
+      <div class="pain-card">
+        <h4>品質低下・顧客離れ</h4>
+        <p>業務過多によるミスと満足度の低下</p>
+      </div>
+    </div>
+    <div class="pain-callout fade-up">
+      💬 「どの事務所に頼んでも結果が同じ『給与計算』では、価格競争に巻き込まれるのは必然です。この悪循環から抜け出す必要があります。」
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TAILWIND (2025) ==================== -->
+<section class="tailwind-section section-pad" id="tailwind">
+  <div class="container">
+    <div class="fade-up">
+      <span class="tag">STEP 2 — 市場の追い風</span>
+      <h2 class="section-title">2025年、巨大な<span class="accent">「追い風」</span>が<br>吹き始めている</h2>
+      <p class="section-sub">経営者の世代交代が進み、「団塊ジュニア世代」がデジタル化を志向。今が最大のビジネスチャンスです。</p>
+    </div>
+    <div class="tw-grid fade-up">
+      <div class="tw-stat">
+        <div class="num">30.8%→12.5%</div>
+        <div class="label">非デジタル化企業の割合が急減<br>(2023→2024年)</div>
+      </div>
+      <div class="tw-stat">
+        <div class="num">2023-2025</div>
+        <div class="label">団塊世代（75歳以上へ）から<br>団塊ジュニア世代への歴史的バトンタッチ</div>
+      </div>
+    </div>
+    <div class="insight-box fade-up">
+      <div class="insight-outer">
+        <h4>表向きの姿 — THE OUTER SHELL</h4>
+        <ul>
+          <li>不屈の忍耐による成功体験</li>
+          <li>「カッコよく、スマートに」経営をやりたい</li>
+          <li>変化に対しては本来「慎重」で保守的</li>
+        </ul>
+      </div>
+      <div class="insight-inner">
+        <h4>抱えるジレンマ — THE INNER REALITY</h4>
+        <ul>
+          <li>先代から引き継いだアナログ労務管理に限界</li>
+          <li>自分で設定する時間はなく、誰かに頼りたい</li>
+          <li>しかし、プライドがあり「言い出せない」</li>
+        </ul>
+      </div>
+    </div>
+    <div class="quote-bubble fade-up">
+      「彼らは『デジタル化したい』とは言いません。スマートに問題を解決してくれる『伴走者』を密かに求めているのです。」
+    </div>
+  </div>
+</section>
+
+<!-- ==================== APPROACH ==================== -->
+<section class="approach-section section-pad" id="approach">
+  <div class="container">
+    <div class="fade-up">
+      <span class="tag">STEP 3 — アプローチ</span>
+      <h2 class="section-title">抽象的な「クラウド化」ではなく、<br>具体的な<span class="accent">「業務の痛み」</span>に寄り添う</h2>
+    </div>
+    <div class="approach-vs fade-up">
+      <div class="approach-card bad">
+        <div class="card-label">✕ 響かないパターン</div>
+        <h4>The Abstract Approach</h4>
+        <div class="example">「社長、代替わりの機会にクラウド化しませんか？」</div>
+        <p style="margin-top:12px;">→ 抽象的すぎてピンとこない。変化を嫌うため見送られる。</p>
+      </div>
+      <div class="approach-card good">
+        <div class="card-label">◎ 響くパターン</div>
+        <h4>The Pain-Point Approach</h4>
+        <div class="example">「タイムカードの集計、担当者の方が大変だと嘆いていませんか？ 無料でお試しできるシステムの設定をお手伝いしますよ。」</div>
+        <p style="margin-top:12px;">→ 具体的な痛みを取り除くため、行動を起こしやすい。</p>
+      </div>
+    </div>
+    <div class="quote-bubble fade-up">
+      「『クラウド化』という言葉はNG！ 日々の具体的な『痛み』を取り除く提案こそが、彼らの心を動かします。」
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PARTNER: JOBCAN ==================== -->
+<section class="partner-section section-pad" id="partner">
+  <div class="container">
+    <div class="fade-up">
+      <span class="tag">パートナーシップ</span>
+      <h2 class="section-title">課題解決の武器：<br><span class="accent">「ジョブカン」</span>とのパートナーシップ</h2>
+      <p class="section-sub">株式会社DONUTSが提供する導入実績30万社超のクラウド型ERP。ゲーム会社を前身とする直感的で美しいUI/UXが最大の強みです。</p>
+    </div>
+    <div class="partner-features fade-up">
+      <div class="pf-card">
+        <div class="pf-icon">🖥️</div>
+        <h4>直感的なUI/UX</h4>
+        <p>ITに不慣れな従業員でも迷わず使える高い操作性</p>
+      </div>
+      <div class="pf-card">
+        <div class="pf-icon">🔄</div>
+        <h4>勤怠～給与を網羅</h4>
+        <p>勤怠管理から給与計算まで一気通貫。2010年以来値上げなし</p>
+      </div>
+      <div class="pf-card">
+        <div class="pf-icon">📱</div>
+        <h4>マルチデバイス</h4>
+        <p>PC・タブレット・スマートフォンで場所を選ばず打刻</p>
+      </div>
+    </div>
+    <div class="quote-bubble fade-up">
+      「お客様が毎日使うものだからこそ、『直感的に使いやすい画面』であることが、導入成功の最大のカギになります。」
+    </div>
+  </div>
+</section>
+
+<!-- ==================== STOCK MODEL ==================== -->
+<section class="stock-section section-pad" id="stock">
+  <div class="container">
+    <div class="fade-up">
+      <span class="tag">収益モデル転換</span>
+      <h2 class="section-title">「労働集約型」から、手離れのよい<br><span class="accent">「ストック型収益」</span>へ</h2>
+    </div>
+    <div class="model-compare fade-up">
+      <div class="model-old">
+        <div class="model-label">旧モデル（給与計算代行）</div>
+        <h4>収益 ＝ 稼働時間</h4>
+        <p>毎月の作業が必須。利益率が低く、ミスが許されないストレス。</p>
+      </div>
+      <div class="model-new">
+        <div class="model-label">新モデル（システム提供）</div>
+        <h4>収益 ＝ システム利用料の粗利</h4>
+        <p>安定稼働後は作業ゼロ。継続的で高利益率な収益源。</p>
+      </div>
+    </div>
+    <div class="calc-box fade-up">
+      <h4>💡 収益シミュレーション（100名規模の会社）</h4>
+      <p class="calc-line">ジョブカン仕入: 280円/ユーザー → 提供: 380円/ユーザー</p>
+      <p class="calc-line">1ユーザーあたり毎月100円の粗利</p>
+      <p class="calc-line">100名 × 100円 ＝</p>
+      <div class="calc-highlight">毎月10,000円 × 12 ＝ 年間120,000円（作業ゼロ）</div>
+    </div>
+
+    <div class="big-number-section fade-up">
+      <div class="glow-line center"></div>
+      <div style="font-size:0.85rem;color:var(--gray-300);margin-bottom:8px;">作業工数</div>
+      <div class="big-number">約87<span style="font-size:0.4em;">%</span></div>
+      <div class="big-number-label">削減で生産性UP</div>
+      <p style="font-size:0.88rem;color:var(--gray-300);max-width:480px;margin:16px auto 0;">
+        アナログ作業を排除して生まれた時間を、高単価なコンサルティング業務へシフト可能。
+      </p>
+    </div>
+
+    <div class="quote-bubble fade-up">
+      「たかが月1万円？ いいえ。システムが稼働すれば『何もしなくても』毎月入る収益です。これが複数社重なることで、事務所の強固な土台（ストック）となります。」
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CASE STUDIES ==================== -->
+<section class="cases-section section-pad" id="cases">
+  <div class="container">
+    <div class="fade-up">
+      <span class="tag">導入事例</span>
+      <h2 class="section-title">実際の<span class="accent">成功ストーリー</span></h2>
+    </div>
+
+    <!-- Case 1 -->
+    <div class="case-card fade-up">
+      <span class="case-badge">CASE 1</span>
+      <h4>100名規模の「V社」〜既存の顧問社労士に競り勝つ〜</h4>
+      <div class="case-flow">
+        <div class="case-step">
+          <div class="step-label">BEFORE</div>
+          <p>既存の顧問社労士にタイムカード集計と給与計算を委託しているが、現場はアナログ作業に疲弊。</p>
+        </div>
+        <div class="case-step">
+          <div class="step-label">INTERVENTION</div>
+          <p>既存社労士は「チラシ」を渡しただけ。当事務所は訪問し、実際の画面で「デモ」を実施。その場で無料お試しアカウントを設定。</p>
+        </div>
+        <div class="case-step">
+          <div class="step-label">AFTER</div>
+          <p>直感的なUIが決め手となり本契約へ。毎月約1万円のストック収益を獲得（作業ゼロ）。さらに深い信頼を得て、別サービス（月額64,660円）へと発展。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 2 -->
+    <div class="case-card fade-up">
+      <span class="case-badge">CASE 2</span>
+      <h4>税理士からの紹介「T社」〜IT伴走が強固な信頼を生む〜</h4>
+      <div class="case-flow">
+        <div class="case-step">
+          <div class="step-label">紹介 → 発見</div>
+          <p>税理士から新社長の就業規則改訂の依頼。ヒアリングで紙のタイムカード手計算の苦労を発見し提案。</p>
+        </div>
+        <div class="case-step">
+          <div class="step-label">壁 → 伴走</div>
+          <p>お試し期間中、iPadとカードリーダーの接続に社長が躓く。直接駆けつけ、一緒に画面を見ながら設定を完了させる。</p>
+        </div>
+        <div class="case-step">
+          <div class="step-label">結果</div>
+          <p>共に壁を乗り越えた一体感が生まれ、システム本契約だけでなく、高単価な社労士顧問契約へ！</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-bubble fade-up">
+      「チラシだけでは社長は動きません。実際の画面を見せて『痛みが消える』ことを体感させることが勝負の分かれ目です。」
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DOMINO ==================== -->
+<section class="domino-section section-pad" id="domino">
+  <div class="container">
+    <div class="fade-up">
+      <span class="tag">戦略フレーム</span>
+      <h2 class="section-title">システム導入はゴールではない。<br>高付加価値への<span class="accent">「最初のドミノ」</span></h2>
+    </div>
+    <div class="domino-steps fade-up">
+      <div class="domino-card">
+        <div class="dom-num">1</div>
+        <h4>クラウド提供<br><span style="font-size:0.75rem;color:var(--teal);">Entry</span></h4>
+        <p>「無料お試し」と「伴走」で入り込む</p>
+      </div>
+      <div class="domino-card">
+        <div class="dom-num">2</div>
+        <h4>顧客の非効率排除<br><span style="font-size:0.75rem;color:var(--teal);">Value</span></h4>
+        <p>アナログ作業が消滅し、圧倒的に感謝される</p>
+      </div>
+      <div class="domino-card">
+        <div class="dom-num">3</div>
+        <h4>社労士の非効率排除<br><span style="font-size:0.75rem;color:var(--teal);">Margin</span></h4>
+        <p>社労士の手作業も消滅。時間とストック収益が生まれる</p>
+      </div>
+      <div class="domino-card">
+        <div class="dom-num">4</div>
+        <h4>顧問・コンサル契約<br><span style="font-size:0.75rem;color:var(--teal);">The Prize</span></h4>
+        <p>ITの壁を越えた「戦友」としての絶対的信頼による高単価契約</p>
+      </div>
+    </div>
+    <div class="quote-bubble fade-up">
+      「クラウド提供は、単なる小銭稼ぎではありません。最も自然に、最も深く顧客の懐に入り込むための最強のフロントエンド商品なのです。」
+    </div>
+  </div>
+</section>
+
+<!-- ==================== VIRTUOUS CYCLE ==================== -->
+<section class="cycle-section section-pad" id="cycle">
+  <div class="container">
+    <div class="fade-up">
+      <span class="tag">好循環モデル</span>
+      <h2 class="section-title">新たなパートナーシップが描く<span class="accent">「好循環」</span></h2>
+    </div>
+    <div class="cycle-list fade-up">
+      <div class="cycle-item">
+        <div class="cycle-num">1</div>
+        <div>
+          <h4>クラウドシステムの活用</h4>
+          <p>ジョブカン等による業務効率化</p>
+        </div>
+      </div>
+      <div class="cycle-item">
+        <div class="cycle-num">2</div>
+        <div>
+          <h4>安定収益の確保</h4>
+          <p>手離れのよいストック収益の獲得</p>
+        </div>
+      </div>
+      <div class="cycle-item">
+        <div class="cycle-num">3</div>
+        <div>
+          <h4>時間と資金の余裕</h4>
+          <p>煩雑な作業から解放されリソースが回復</p>
+        </div>
+      </div>
+      <div class="cycle-item">
+        <div class="cycle-num">4</div>
+        <div>
+          <h4>付加価値サービスの向上</h4>
+          <p>本来の専門性を活かした労務コンサルに注力</p>
+        </div>
+      </div>
+      <div class="cycle-item">
+        <div class="cycle-num">5</div>
+        <div>
+          <h4>顧客満足度UP＆紹介の連鎖</h4>
+          <p>「スマートな社労士」として新規顧客が次々紹介される</p>
+        </div>
+      </div>
+    </div>
+    <div class="quote-bubble fade-up">
+      「労働集約型の泥沼から抜け出し、専門家としての本来の価値を最大限に発揮できる好循環を回しましょう。」
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MEDIA ==================== -->
+<section class="media-section section-pad" id="media">
+  <div class="container">
+    <div class="fade-up">
+      <span class="tag">解説コンテンツ</span>
+      <h2 class="section-title"><span class="accent">動画＆音声</span>で理解を深める</h2>
+    </div>
+    <div class="media-grid fade-up">
+      <div class="media-card">
+        <video controls preload="metadata" poster="hero.jpg">
+          <source src="high_value_business_shift_small.mp4" type="video/mp4">
+        </video>
+        <div class="media-body">
+          <h4>📹 高付加価値ビジネスへのシフト</h4>
+          <p>労働集約型から付加価値型への転換プロセスを動画で解説</p>
+        </div>
+      </div>
+      <div class="media-card">
+        <audio controls preload="metadata">
+          <source src="sharoushi_stock_income_small.m4a" type="audio/mp4">
+        </audio>
+        <div class="media-body">
+          <h4>🎧 ストック型収益の全体像</h4>
+          <p>移動中でも学べる音声コンテンツ。クラウド連携の設計図を音声で解説</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SLIDE GALLERY & DOWNLOAD ==================== -->
+<section class="slides-section section-pad" id="slides">
+  <div class="container">
+    <div class="fade-up">
+      <span class="tag">資料ダウンロード</span>
+      <h2 class="section-title"><span class="accent">全13スライド</span>をプレビュー＆ダウンロード</h2>
+      <p class="section-sub">スライド資料をその場でご覧いただけます。PDF版はそのままダウンロードも可能です。</p>
+    </div>
+    <div class="slide-gallery fade-up">
+      <div class="slide-viewer">
+        <img id="slideMain" src="slide_01.jpg" alt="スライド 1/13">
+      </div>
+      <div class="slide-nav">
+        <button id="slidePrev" aria-label="前のスライド">◀</button>
+        <div class="slide-counter"><span class="current" id="slideCur">1</span> / 13</div>
+        <button id="slideNext" aria-label="次のスライド">▶</button>
+      </div>
+      <div class="slide-thumbs" id="slideThumbs"></div>
+    </div>
+    <div class="download-area fade-up">
+      <a href="Sharo-shi_Stock_Revenue_Blueprint.pdf" class="dl-btn" download="社労士ストック型収益構築ガイド.pdf">
+        📥 PDF資料をダウンロード（全13ページ）
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== OFFER ==================== -->
+<section class="offer-section section-pad" id="offer">
+  <div class="container">
+    <div class="offer-box fade-up">
+      <div class="glow-line center"></div>
+      <h2 class="offer-title">WFJ × ジョブカン<br>「特別プラン」へのご招待</h2>
+      <p class="offer-sub">ノーリスクで新たな収益の柱を構築しませんか？</p>
+      <div class="offer-points">
+        <div class="op-card">
+          <div class="op-icon">✅</div>
+          <h4>登録無料・ノルマなし</h4>
+          <p>士業資格をお持ちの方は無料で登録可能。自社用アカウントも付与。</p>
+        </div>
+        <div class="op-card">
+          <div class="op-icon">🚫</div>
+          <h4>最低利用料金の免除</h4>
+          <p>通常発生する最低利用料金が免除され、小規模クライアントにも提案しやすい。</p>
+        </div>
+        <div class="op-card">
+          <div class="op-icon">🤝</div>
+          <h4>伴走サポート＆ストック収益</h4>
+          <p>充実した補助コンテンツと、特別仕切り価格による毎月の安定マージン。</p>
+        </div>
+      </div>
+      <a href="#" class="cta-btn" style="font-size:1.2rem;padding:18px 48px;">無料パートナー登録はこちら →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CLOSING ==================== -->
+<section class="closing-section">
+  <div class="container">
+    <div class="fade-up">
+      <div class="glow-line center"></div>
+      <h2 class="closing-title">時代に取り残されるか、<br>新時代の<span class="accent">「設計者」</span>となるか。</h2>
+      <p class="closing-desc">
+        2025年、経営者の世代交代により、中小企業のデジタル化は待ったなしの状況を迎えます。
+        的確なソリューションを提供できる社労士事務所だけが、これからも選ばれ続ける「付加価値型」の事務所となります。
+        私たちと一緒に、新しい収益の柱となるパートナーシップを始めましょう。
+      </p>
+      <a href="#offer" class="cta-btn">パートナー登録を始める →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="container">
+    <p>© 2025 kenjispark AI士業ラボ × WFJ（ウエルフルジャパン） All rights reserved.</p>
+    <p style="margin-top:4px;">Powered by NotebookLM + Claude AI</p>
+  </div>
+</footer>
+
+<script>
+// Intersection Observer for fade-up animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ============ SLIDE GALLERY ============
+(function(){
+  var total=13, cur=1;
+  var mainImg=document.getElementById('slideMain');
+  var curLabel=document.getElementById('slideCur');
+  var thumbsC=document.getElementById('slideThumbs');
+  var prevBtn=document.getElementById('slidePrev');
+  var nextBtn=document.getElementById('slideNext');
+  function pad(n){return n<10?'0'+n:''+n;}
+  for(var i=1;i<=total;i++){
+    var t=document.createElement('img');
+    t.src='slide_'+pad(i)+'.jpg';
+    t.alt='スライド '+i;
+    if(i===1)t.classList.add('active');
+    (function(idx){t.addEventListener('click',function(){goTo(idx);})})(i);
+    thumbsC.appendChild(t);
+  }
+  function goTo(n){
+    cur=n; mainImg.src='slide_'+pad(n)+'.jpg';
+    mainImg.alt='スライド '+n+'/13'; curLabel.textContent=n;
+    thumbsC.querySelectorAll('img').forEach(function(t,idx){
+      t.classList.toggle('active',idx===n-1);
+    });
+  }
+  prevBtn.addEventListener('click',function(){goTo(cur<=1?total:cur-1);});
+  nextBtn.addEventListener('click',function(){goTo(cur>=total?1:cur+1);});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft')prevBtn.click();
+    if(e.key==='ArrowRight')nextBtn.click();
+  });
+})();
+</script>
+</body>
+</html>
